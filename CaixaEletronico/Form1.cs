@@ -16,17 +16,18 @@ namespace CaixaEletronico
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.conta = new Conta();
+           /* this.conta = new Conta();
             Cliente cliente = new Cliente("Victor");
             this.conta.Titular = cliente;
             this.conta.Deposita(250.0);
             this.conta.Numero = 1;
             this.MostraConta();
+            */
         }
 
         private void btnDeposito_Click(object sender, EventArgs e)
         {
-
+            
             string textoValorDeposito = textoValor.Text;
             double valorDeposito = Convert.ToDouble(textoValorDeposito);
             this.conta.Deposita(valorDeposito);
@@ -46,6 +47,15 @@ namespace CaixaEletronico
             textoTitular.Text = this.conta.Titular.Nome;
             textoSaldo.Text = Convert.ToString(this.conta.Saldo);
             textoNumero.Text = Convert.ToString(this.conta.Numero);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ContaPoupanca cp = new ContaPoupanca();
+            cp.Deposita(1000.0);
+            cp.Saca(100.0);
+
+            MessageBox.Show("Saldo: " + cp.Saldo);
         }
     }
 }

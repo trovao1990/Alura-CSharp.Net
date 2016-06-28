@@ -14,7 +14,7 @@ namespace CaixaEletronico
 
         public double Saldo
         {
-            get; private set;
+            get; protected set;
         }
 
         public Cliente Titular
@@ -22,7 +22,7 @@ namespace CaixaEletronico
             get; set;
         }
         
-        public void Saca(double valor)
+        public virtual void Saca(double valor)
         {
             this.Saldo -= valor;
         } 
