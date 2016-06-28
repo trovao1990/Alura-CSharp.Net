@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CaixaEletronico
@@ -19,15 +12,17 @@ namespace CaixaEletronico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta conta = new Conta();
-            Cliente vinicius = new Cliente();
-            conta.cliente = vinicius;
+            Conta umaConta = new Conta();
+            Cliente cliente1 = new Cliente("Vinicius");
+            umaConta.Titular = cliente1;
 
-            vinicius.nome = "Vinicius";
-            vinicius.rg = "124742";
-
-            MessageBox.Show(vinicius.nome);
-            MessageBox.Show(vinicius.rg);
+            //cliente1.nome = "Vinicius"; // ou umaConta.titular.nome = "Vinicius";
+            //cliente1.rg = "124742";
+            umaConta.Deposita(2000.0);
+            umaConta.Saca(500.0);
+           
+          
+            MessageBox.Show("Nome do cliente" + umaConta.Titular.Nome);
         }
     }
 }
