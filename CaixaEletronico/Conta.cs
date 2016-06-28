@@ -8,7 +8,7 @@ namespace CaixaEletronico
 {
     class Conta
     {
-        private int Numero {
+        public int Numero {
             get; set;
         }
 
