@@ -10,8 +10,12 @@ namespace CaixaEletronico
     {
         public override void Saca(double valor)
         {
-            this.Saldo -= valor + 0.1;
+            this.Saldo -= valor + 0.10;
         }
 
+        public void CalculaRendimento()
+        {
+            this.Saldo += 100.0;
+        }
     }
 }

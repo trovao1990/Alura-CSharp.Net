@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnTotalizador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -71,9 +72,9 @@
             // 
             // btnDeposito
             // 
-            this.btnDeposito.Location = new System.Drawing.Point(61, 184);
+            this.btnDeposito.Location = new System.Drawing.Point(17, 184);
             this.btnDeposito.Name = "btnDeposito";
-            this.btnDeposito.Size = new System.Drawing.Size(75, 23);
+            this.btnDeposito.Size = new System.Drawing.Size(99, 23);
             this.btnDeposito.TabIndex = 5;
             this.btnDeposito.Text = "Depositar";
             this.btnDeposito.UseVisualStyleBackColor = true;
@@ -81,9 +82,9 @@
             // 
             // btnSaque
             // 
-            this.btnSaque.Location = new System.Drawing.Point(158, 184);
+            this.btnSaque.Location = new System.Drawing.Point(173, 184);
             this.btnSaque.Name = "btnSaque";
-            this.btnSaque.Size = new System.Drawing.Size(75, 23);
+            this.btnSaque.Size = new System.Drawing.Size(99, 23);
             this.btnSaque.TabIndex = 6;
             this.btnSaque.Text = "Saque";
             this.btnSaque.UseVisualStyleBackColor = true;
@@ -127,19 +128,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(133, 226);
+            this.button1.Location = new System.Drawing.Point(17, 213);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 11;
-            this.button1.Text = "btnTeste";
+            this.button1.Text = "Conta Poupança";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTotalizador
+            // 
+            this.btnTotalizador.Location = new System.Drawing.Point(173, 212);
+            this.btnTotalizador.Name = "btnTotalizador";
+            this.btnTotalizador.Size = new System.Drawing.Size(99, 23);
+            this.btnTotalizador.TabIndex = 12;
+            this.btnTotalizador.Text = "Totalizador";
+            this.btnTotalizador.UseVisualStyleBackColor = true;
+            this.btnTotalizador.Click += new System.EventHandler(this.btnTotalizador_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnTotalizador);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -171,6 +183,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTotalizador;
     }
 }
 
