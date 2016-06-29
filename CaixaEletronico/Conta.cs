@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class Conta
+    abstract class Conta
     {
         public int Numero {
             get; set;
@@ -21,16 +21,13 @@ namespace CaixaEletronico
         {
             get; set;
         }
-        
-        public virtual void Saca(double valor)
-        {
-            this.Saldo -= valor;
-        } 
 
-        public void Deposita(double valor)
-        {
-            this.Saldo += valor;
-        }
+        public abstract void Saca(double valor);
+
+
+
+        public abstract void Deposita(double valor);
+       
 
         public void Transfere(double valor, Conta destino)
         {

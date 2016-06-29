@@ -17,5 +17,9 @@ namespace CaixaEletronico
         {
             this.Saldo += 100.0;
         }
+        public override void Deposita(double valor)
+        {
+            this.Saldo += valor;
+        }
     }
 }
